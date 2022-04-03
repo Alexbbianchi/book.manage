@@ -54,6 +54,7 @@ class _DesireDetaisState extends State<DesireDetais> {
                 _publicationDateField,
                 _pagesField,
                 _languageSelect,
+                _descriptionField,
               ],
             ),
           ),
@@ -419,6 +420,23 @@ class _DesireDetaisState extends State<DesireDetais> {
           color: Colors.grey.shade700,
         ),
       ],
+    );
+  }
+
+  TextFormField get _descriptionField {
+    return TextFormField(
+      initialValue: widget.back.book!.description,
+      onSaved: (value) => widget.back.book!.description = value,
+      decoration: const InputDecoration(
+        labelText: "Descrição:",
+        hintText: 'Escreva a descrição do livro aqui',
+      ),
+      style: Constants.sdFormText,
+      cursorColor: Constants.myGrey,
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.multiline,
+      minLines: 4,
+      maxLines: 4,
     );
   }
 }
