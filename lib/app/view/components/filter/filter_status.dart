@@ -38,7 +38,14 @@ class _FilterStatusState extends State<FilterStatus> {
                                 });
                               },
                             ),
-                            Text(type.description),
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  statusFilter = type;
+                                });
+                              },
+                              child: Text(type.description),
+                            ),
                           ],
                         );
                       }).toList(),

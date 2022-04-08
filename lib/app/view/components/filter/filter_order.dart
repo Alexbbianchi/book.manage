@@ -45,7 +45,14 @@ class _FilterOrderState extends State<FilterOrder> {
                                     });
                                   },
                                 ),
-                                Text(type.description),
+                                GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      sortFilterAvanced = type;
+                                    });
+                                  },
+                                  child: Text(type.description),
+                                ),
                               ],
                             );
                           }).toList(),
@@ -64,7 +71,14 @@ class _FilterOrderState extends State<FilterOrder> {
                                     });
                                   },
                                 ),
-                                Text(type.description),
+                                GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      sortFilter = type;
+                                    });
+                                  },
+                                  child: Text(type.description),
+                                ),
                               ],
                             );
                           }).toList(),

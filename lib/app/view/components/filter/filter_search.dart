@@ -38,8 +38,7 @@ class _FilterSearchState extends State<FilterSearch> {
                             onChanged: (value) => title = value,
                             decoration: const InputDecoration(
                               labelText: 'Título',
-                              hintText:
-                                  'Informe um título a ser filtrado',
+                              hintText: 'Informe um título a ser filtrado',
                             ),
                             style: Constants.sdFormText,
                             cursorColor: Constants.myGrey,
