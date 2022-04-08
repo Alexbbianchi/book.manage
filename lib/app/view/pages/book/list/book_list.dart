@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:projeto_integrador_app/app/domain/entities/book.dart';
-import 'package:projeto_integrador_app/app/view/components/filter.dart';
+import 'package:projeto_integrador_app/app/view/components/filter/filter.dart';
 import 'package:projeto_integrador_app/app/view/components/tile.dart';
 import 'package:projeto_integrador_app/app/common/utility/common_service.dart';
 import 'package:projeto_integrador_app/app/view/components/button_edit_icon.dart';
@@ -43,13 +43,11 @@ class BookList extends StatelessWidget {
                               child: Row(
                                 children: [
                                   ButtonEditIcon(
-                                    () =>
-                                        _back.goToForm(context, resultData[i]),
+                                    () => _back.goToForm(context, resultData[i]),
                                   ),
                                   ButtonDeleteIcon(
                                     context,
-                                    () =>
-                                        _back.remove(resultData[i].id, context),
+                                    () => _back.remove(resultData[i].id, context),
                                   ),
                                 ],
                               ),
