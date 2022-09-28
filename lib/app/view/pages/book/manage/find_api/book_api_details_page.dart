@@ -140,16 +140,14 @@ class BookApiDetailsPage extends StatelessWidget {
     ImageParse.networkImageToBase64(bookApi.thumbnailUrl!).then((value) {
       newBook.image = value;
       goToBookForm(context, newBook);
-    }).catchError(
-      (error) {
-        goToBookForm(context, newBook);
-      } 
-    );
+    }).catchError((error) {
+      goToBookForm(context, newBook);
+    });
   }
 
   void goToBookForm(BuildContext context, Book book) {
     Navigator.of(context).pushReplacementNamed(
-      Routes.BOOK_FORM,
+      Routes.bookForm,
       arguments: book,
     );
   }

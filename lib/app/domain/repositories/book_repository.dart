@@ -10,7 +10,7 @@ class BookRepository {
     return await _connection.database;
   }
 
-  final _table = 'book';
+  final _table = 'books';
 
   Future<List<Book>> findAll(BookItemType itemType, String filter) async {
     Database _db = await _getDatabase();

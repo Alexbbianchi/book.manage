@@ -34,7 +34,7 @@ class DesireFormBack {
 
   goToForm(BuildContext context, [Book? book]) {
     Navigator.of(context)
-        .pushReplacementNamed(Routes.DESIRE_FORM, arguments: book);
+        .pushReplacementNamed(Routes.desireForm, arguments: book);
   }
 
   save(BuildContext context) async {

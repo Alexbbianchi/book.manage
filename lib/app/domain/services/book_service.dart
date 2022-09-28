@@ -39,6 +39,7 @@ class BookService {
     for (var genreId in book.genres!) {
       if (!dicDBGenres.containsKey(genreId)) {
         var newGenre = BookToGenre(bookId: book.id, genreId: genreId);
+
         await _bookToGenreRepository.insert(newGenre);
       }
 

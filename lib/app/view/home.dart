@@ -202,7 +202,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 );
                                 Navigator.of(context)
                                     .pushNamed(
-                                      Routes.BOOK_FORM,
+                                      Routes.bookForm,
                                     )
                                     .then(
                                         (value) => Navigator.of(context).pop());
@@ -234,7 +234,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   CommonService.messageError(
                                       context, 'ISBN $value não encontrado');
                                   Navigator.of(context)
-                                      .pushNamed(Routes.BOOK_FORM,
+                                      .pushNamed(Routes.bookForm,
                                           arguments: Book(isbn: value))
                                       .then((value) =>
                                           Navigator.of(context).pop());
@@ -253,7 +253,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   if (bookApi.thumbnailUrl == null) {
                                     Navigator.of(context)
                                         .pushNamed(
-                                          Routes.BOOK_FORM,
+                                          Routes.bookForm,
                                           arguments: newBook,
                                         )
                                         .then((value) =>
@@ -264,13 +264,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                         .then((value) {
                                       newBook.image = value;
                                       Navigator.of(context)
-                                          .pushNamed(Routes.BOOK_FORM,
+                                          .pushNamed(Routes.bookForm,
                                               arguments: newBook)
                                           .then((value) =>
                                               Navigator.of(context).pop());
                                     }).catchError((error) {
                                       Navigator.of(context)
-                                          .pushNamed(Routes.BOOK_FORM,
+                                          .pushNamed(Routes.bookForm,
                                               arguments: newBook)
                                           .then((value) =>
                                               Navigator.of(context).pop());
@@ -299,7 +299,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       ),
                       onPressed: () {
                         Navigator.of(context)
-                            .pushNamed(Routes.BOOK_FIND_API)
+                            .pushNamed(Routes.bookFindApi)
                             .then((value) => Navigator.of(context).pop());
                       },
                     ),
@@ -310,7 +310,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       ),
                       onPressed: () {
                         Navigator.of(context)
-                            .pushNamed(Routes.BOOK_FORM)
+                            .pushNamed(Routes.bookForm)
                             .then((value) => Navigator.of(context).pop());
                       },
                     ),
@@ -322,10 +322,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
           return;
         case NavigationTop.borrowed:
-          Navigator.of(context).pushNamed(Routes.BORROWED_FORM);
+          Navigator.of(context).pushNamed(Routes.borrowedForm);
           return;
         case NavigationTop.desire:
-          Navigator.of(context).pushNamed(Routes.DESIRE_FORM);
+          Navigator.of(context).pushNamed(Routes.desireForm);
           return;
         default:
           return;

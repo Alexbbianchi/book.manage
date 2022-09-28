@@ -26,13 +26,13 @@ abstract class _DesireListBack with Store {
 
   goToForm(BuildContext context, [Book? book]) {
     Navigator.of(context)
-        .pushNamed(Routes.DESIRE_FORM, arguments: book)
+        .pushNamed(Routes.desireForm, arguments: book)
         .then(refleshList);
   }
 
   goToView(BuildContext context, [Book? book]) {
     Navigator.of(context)
-        .pushNamed(Routes.DESIRE_VIEW, arguments: book)
+        .pushNamed(Routes.desireView, arguments: book)
         .then(refleshList);
   }
 

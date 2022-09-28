@@ -9,7 +9,7 @@ class ShelfRepository {
     return await _connection.database;
   }
 
-  final _table = 'shelf';
+  final _table = 'shelfs';
 
   Future<List<Shelf>> findAll() async {
     final _db = await _getDatabase();

@@ -6,7 +6,6 @@ enum StatusFilterType {
 }
 
 extension StatusFilterTypeDescription on StatusFilterType? {
-  // ignore: missing_return
   String get description {
     switch (this) {
       case StatusFilterType.all:
@@ -22,7 +21,6 @@ extension StatusFilterTypeDescription on StatusFilterType? {
     }
   }
 
-  // ignore: missing_return
   String get cod {
     switch (this) {
       case StatusFilterType.all:

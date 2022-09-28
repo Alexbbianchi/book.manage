@@ -9,7 +9,7 @@ class BookToGenreRepository {
     return await _connection.database;
   }
 
-  final _table = 'book_to_genre';
+  final _table = 'book_to_genres';
 
   Future<List<BookToGenre>> findAll() async {
     final _db = await _getDatabase();

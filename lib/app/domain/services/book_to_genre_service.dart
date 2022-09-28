@@ -24,8 +24,8 @@ class BookToGenreService {
   Future<List<BookToGenre>> findAllByBookId(int? bookId) async {
     var bookToGenres = await _bookToGenreRepository.findAllByBookId(bookId);
 
-    for (var bg in bookToGenres) {
-      bg.genre = await _genreRepository.findById(bg.genreId);
+    for (var btg in bookToGenres) {
+      btg.genre = await _genreRepository.findById(btg.genreId);
     }
 
     return bookToGenres;

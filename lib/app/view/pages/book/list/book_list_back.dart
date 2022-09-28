@@ -9,6 +9,7 @@ import 'package:projeto_integrador_app/app/common/utility/common_service.dart';
 part 'book_list_back.g.dart';
 
 class BookListBack = _BookListBack with _$BookListBack;
+
 FilterModel? filterCache;
 
 abstract class _BookListBack with Store {
@@ -36,13 +37,13 @@ abstract class _BookListBack with Store {
 
   goToForm(BuildContext context, [Book? book]) {
     Navigator.of(context)
-        .pushNamed(Routes.BOOK_FORM, arguments: book)
+        .pushNamed(Routes.bookForm, arguments: book)
         .then(refleshList);
   }
 
   goToView(BuildContext context, [Book? book]) {
     Navigator.of(context)
-        .pushNamed(Routes.BOOK_VIEW, arguments: book)
+        .pushNamed(Routes.bookView, arguments: book)
         .then(refleshList);
   }
 

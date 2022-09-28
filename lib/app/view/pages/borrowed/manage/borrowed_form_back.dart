@@ -21,7 +21,7 @@ class BorrowedFormBack {
 
   goToForm(BuildContext context, [Borrowed? borrowed]) {
     Navigator.of(context)
-        .pushReplacementNamed(Routes.BORROWED_FORM, arguments: borrowed);
+        .pushReplacementNamed(Routes.borrowedForm, arguments: borrowed);
   }
 
   save(BuildContext context) async {

@@ -18,7 +18,6 @@ extension SortFilterAvancedTypeDescription on SortFilterAvancedType? {
     }
   }
 
-  // ignore: missing_return
   String get cod {
     switch (this) {
       case SortFilterAvancedType.title:

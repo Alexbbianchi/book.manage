@@ -9,14 +9,14 @@ class ShelfToBookRepository {
     return await _connection.database;
   }
 
-  final _table = 'shelf_to_book';
+  final _table = 'shelf_to_books';
 
   Future<List<ShelfToBook>> findAll() async {
     final _db = await _getDatabase();
 
     String query = '''
       SELECT * FROM $_table
-        INNER JOIN book ON $_table.book_id = book.book_id
+        INNER JOIN books ON $_table.book_id = books.book_id
     ''';
 
     List<Map<String, dynamic>> allRows = await _db.rawQuery(query);
@@ -30,7 +30,7 @@ class ShelfToBookRepository {
 
     String query = '''
       SELECT * FROM $_table
-        INNER JOIN book ON $_table.book_id = book.book_id
+        INNER JOIN books ON $_table.book_id = books.book_id
       WHERE shelf_Id = '$shelfId'
     ''';
 

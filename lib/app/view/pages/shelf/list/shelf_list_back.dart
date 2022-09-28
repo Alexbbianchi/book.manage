@@ -28,7 +28,7 @@ abstract class _ShelfListBack with Store {
 
   goToForm(BuildContext context, [Shelf? shelf]) {
     Navigator.of(context)
-        .pushNamed(Routes.SHELF_TO_BOOK_LIST, arguments: shelf)
+        .pushNamed(Routes.shelfToBookList, arguments: shelf)
         .then(refleshList);
   }
 

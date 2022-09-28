@@ -23,7 +23,7 @@ class DesireForm extends StatelessWidget {
                   tooltip: "Adicionar em adiquiridos",
                   icon: const Icon(Icons.bookmark_add_sharp),
                   onPressed: () => Navigator.of(context).pushReplacementNamed(
-                    Routes.BOOK_FORM,
+                    Routes.bookForm,
                     arguments: _back.book,
                   ),
                 )

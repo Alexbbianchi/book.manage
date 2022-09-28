@@ -25,6 +25,7 @@ class ImageParse {
     http.Response response = await http.get(Uri.parse(imageUrl));
 
     final bytes = response.bodyBytes;
+
     return (bytes.isNotEmpty ? base64Encode(bytes) : null)!;
   }
 }

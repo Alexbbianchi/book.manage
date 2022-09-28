@@ -5,7 +5,6 @@ enum BookStatusType {
 }
 
 extension BookStatusTypeDescription on BookStatusType? {
-  // ignore: missing_return
   String get description {
     switch (this) {
       case BookStatusType.read:
@@ -19,7 +18,6 @@ extension BookStatusTypeDescription on BookStatusType? {
     }
   }
 
-  // ignore: missing_return
   String get cod {
     switch (this) {
       case BookStatusType.read:

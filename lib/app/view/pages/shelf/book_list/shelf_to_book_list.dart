@@ -45,7 +45,7 @@ class ShelfToBookList extends StatelessWidget {
                       key: const ValueKey(0),
                       child: GestureDetector(
                         onTap: () => Navigator.of(ctx).pushNamed(
-                          Routes.BOOK_VIEW,
+                          Routes.bookView,
                           arguments: resultData[i].book,
                         ),
                         child: Tile(

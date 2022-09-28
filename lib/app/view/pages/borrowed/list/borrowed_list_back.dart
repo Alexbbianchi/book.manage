@@ -25,13 +25,13 @@ abstract class _BorrowedListBack with Store {
 
   goToForm(BuildContext context, [Borrowed? borrowed]) {
     Navigator.of(context)
-        .pushNamed(Routes.BORROWED_FORM, arguments: borrowed)
+        .pushNamed(Routes.borrowedForm, arguments: borrowed)
         .then(refleshList);
   }
 
   goToView(BuildContext context, [Borrowed? borrowed]) {
     Navigator.of(context)
-        .pushNamed(Routes.BORROWED_VIEW, arguments: borrowed)
+        .pushNamed(Routes.borrowedView, arguments: borrowed)
         .then(refleshList);
   }
 

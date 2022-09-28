@@ -10,7 +10,6 @@ enum BookLanguageType {
 }
 
 extension BookLanguageTypeDescription on BookLanguageType? {
-  // ignore: missing_return
   String get description {
     switch (this) {
       case BookLanguageType.portuguese:
@@ -34,7 +33,6 @@ extension BookLanguageTypeDescription on BookLanguageType? {
     }
   }
 
-  // ignore: missing_return
   String get cod {
     switch (this) {
       case BookLanguageType.portuguese:

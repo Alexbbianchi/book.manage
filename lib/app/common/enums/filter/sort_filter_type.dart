@@ -1,10 +1,6 @@
-enum SortFilterType {
-  ascending,
-  descending
-}
+enum SortFilterType { ascending, descending }
 
 extension SortFilterTypeDescription on SortFilterType {
-  // ignore: missing_return
   String get description {
     switch (this) {
       case SortFilterType.ascending:
@@ -14,7 +10,6 @@ extension SortFilterTypeDescription on SortFilterType {
     }
   }
 
-  // ignore: missing_return
   String get cod {
     switch (this) {
       case SortFilterType.ascending:

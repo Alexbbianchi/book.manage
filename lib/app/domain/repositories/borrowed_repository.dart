@@ -9,7 +9,7 @@ class BorrowedRepository {
     return await _connection.database;
   }
 
-  final _table = 'borrowed';
+  final _table = 'borroweds';
 
   Future<List<Borrowed>> findAll() async {
     final _db = await _getDatabase();
@@ -28,7 +28,7 @@ class BorrowedRepository {
 
     String query = '''
       SELECT * FROM $_table 
-        INNER JOIN book ON $_table.book_id = book.book_id 
+        INNER JOIN books ON $_table.book_id = books.book_id 
       WHERE $_table.returned_date is null;
     ''';
 
@@ -41,7 +41,7 @@ class BorrowedRepository {
 
     String query = '''
       SELECT * FROM $_table 
-        INNER JOIN book ON $_table.book_id = book.book_id  
+        INNER JOIN books ON $_table.book_id = books.book_id  
       WHERE $_table.borrowed_id = $id;
     ''';
 

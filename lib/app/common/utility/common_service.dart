@@ -19,11 +19,7 @@ class CommonService {
   }
 
   static String formattedDate(DateTime? date) {
-    if (date == null) {
-      return '';
-    }
-
-    return DateFormat('dd/MM/yyyy').format(date);
+    return date != null ? DateFormat('dd/MM/yyyy').format(date) : "";
   }
 
   static double width(BuildContext context) {
@@ -36,9 +32,6 @@ class CommonService {
 
   static Future<bool> validationConnection() async {
     var connectivityResult = await Connectivity().checkConnectivity();
-    if (connectivityResult == ConnectivityResult.none) {
-      return false;
-    }
-    return true;
+    return connectivityResult != ConnectivityResult.none;
   }
 }

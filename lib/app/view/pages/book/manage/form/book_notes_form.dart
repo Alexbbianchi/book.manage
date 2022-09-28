@@ -255,7 +255,7 @@ class _BookNotesFromState extends State<BookNotesFrom> {
     return InkWell(
       onTap: () {
         if (add) {
-          widget.back.book!.notes!.insert(0, null);
+          widget.back.book!.notes!.insert(0, "");
         } else {
           widget.back.book!.notes!.removeAt(index);
         }

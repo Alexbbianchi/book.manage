@@ -41,7 +41,7 @@ class BookFormBack {
 
   goToForm(BuildContext context, [Book? book]) {
     Navigator.of(context)
-        .pushReplacementNamed(Routes.BOOK_FORM, arguments: book);
+        .pushReplacementNamed(Routes.bookForm, arguments: book);
   }
 
   save(BuildContext context) async {

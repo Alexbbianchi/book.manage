@@ -30,28 +30,28 @@ class Connection {
   }
 
   _onCreate(Database db, int version) async {
-    await db.execute(_genre);
-    await db.execute(_book);
-    await db.execute(_bookToGenre);
-    await db.execute(_shelf);
-    await db.execute(_shelfToBook);
-    await db.execute(_borrowed);
+    await db.execute(_genres);
+    await db.execute(_books);
+    await db.execute(_bookToGenres);
+    await db.execute(_shelfs);
+    await db.execute(_shelfToBooks);
+    await db.execute(_borroweds);
 
-    await db.insert('genre', {'name': 'Romance'});
-    await db.insert('genre', {'name': 'Terror'});
-    await db.insert('genre', {'name': 'Ficção'});
-    await db.insert('genre', {'name': 'Ficção Cientifica'});
-    await db.insert('genre', {'name': 'Poesia'});
-    await db.insert('genre', {'name': 'Conto'});
-    await db.insert('genre', {'name': 'Crônica'});
-    await db.insert('genre', {'name': 'Biografia'});
-    await db.insert('genre', {'name': 'Aventura'});
-    await db.insert('genre', {'name': 'Literatura Nacional'});
-    await db.insert('genre', {'name': 'História em Quadrinho'});
-    await db.insert('genre', {'name': 'Literatura infantil'});
-    await db.insert('genre', {'name': 'Thriller'});
-    await db.insert('genre', {'name': 'Suspense Policial'});
-    await db.insert('genre', {'name': 'Suspense'});
+    await db.insert('genres', {'name': 'Romance'});
+    await db.insert('genres', {'name': 'Terror'});
+    await db.insert('genres', {'name': 'Ficção'});
+    await db.insert('genres', {'name': 'Ficção Cientifica'});
+    await db.insert('genres', {'name': 'Poesia'});
+    await db.insert('genres', {'name': 'Conto'});
+    await db.insert('genres', {'name': 'Crônica'});
+    await db.insert('genres', {'name': 'Biografia'});
+    await db.insert('genres', {'name': 'Aventura'});
+    await db.insert('genres', {'name': 'Literatura Nacional'});
+    await db.insert('genres', {'name': 'História em Quadrinho'});
+    await db.insert('genres', {'name': 'Literatura infantil'});
+    await db.insert('genres', {'name': 'Thriller'});
+    await db.insert('genres', {'name': 'Suspense Policial'});
+    await db.insert('genres', {'name': 'Suspense'});
 
     // await db.execute(insertBook);
     // await db.execute(insertBook1);
@@ -69,8 +69,8 @@ class Connection {
     // await db.execute(insertBorrowed);
   }
 
-  String get _book => '''
-    CREATE TABLE book(
+  String get _books => '''
+    CREATE TABLE books(
       book_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
       title VARCHAR(100) NOT NULL,
       author VARCHAR(100) NOT NULL,
@@ -94,15 +94,15 @@ class Connection {
     );
   ''';
 
-  String get _genre => '''
-    CREATE TABLE genre(
+  String get _genres => '''
+    CREATE TABLE genres(
       genre_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
       name VARCHAR(20) UNIQUE NOT NULL
     );
   ''';
 
-  String get _bookToGenre => '''
-    CREATE TABLE book_to_genre(
+  String get _bookToGenres => '''
+    CREATE TABLE book_to_genres(
       book_to_genre_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
       book_id INTEGER NOT NULL,
       genre_id INTEGER NOT NULL,
@@ -111,15 +111,15 @@ class Connection {
     );
   ''';
 
-  String get _shelf => '''
-    CREATE TABLE shelf(
+  String get _shelfs => '''
+    CREATE TABLE shelfs(
       shelf_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
       name VARCHAR(20) UNIQUE NOT NULL
     );
   ''';
 
-  String get _shelfToBook => '''
-    CREATE TABLE shelf_to_book(
+  String get _shelfToBooks => '''
+    CREATE TABLE shelf_to_books(
       shelf_to_book_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
       shelf_id INTEGER NOT NULL,
       book_id INTEGER NOT NULL,
@@ -128,8 +128,8 @@ class Connection {
     );
   ''';
 
-  String get _borrowed => '''
-    CREATE TABLE borrowed(
+  String get _borroweds => '''
+    CREATE TABLE borroweds(
       borrowed_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
       book_id INTEGER NOT NULL,
       name VARCHAR(50) NOT NULL,
