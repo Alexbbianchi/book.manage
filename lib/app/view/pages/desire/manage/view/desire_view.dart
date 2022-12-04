@@ -46,7 +46,7 @@ class DesireView extends StatelessWidget {
                         child: _back.book!.image != null
                             ? ImageParse.imageFromBase64String(
                                 _back.book!.image!)
-                            : Image.asset(ConstantAssets.imgDefault),
+                            : Image.asset(ConstantAssets.imgDarkDefault),
                       ),
                     ),
                     Expanded(

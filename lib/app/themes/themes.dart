@@ -9,7 +9,62 @@ class Themes {
 
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
+    canvasColor: Constants.myWrite,
+    dialogTheme: const DialogTheme(
+      backgroundColor: Constants.myWrite,
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all(Constants.myBlack),
+      ),
+    ),
+    appBarTheme: const AppBarTheme(
+      iconTheme: IconThemeData(color: Constants.myWrite),
+      backgroundColor: Constants.myPurple,
+      titleTextStyle: TextStyle(color: Constants.myWrite, fontSize: 26),
+    ),
+    sliderTheme: const SliderThemeData(
+      activeTrackColor: Colors.amber,
+      inactiveTrackColor: Colors.grey,
+      overlayColor: Color.fromRGBO(255, 193, 7, 0.3),
+      thumbColor: Colors.amber,
+    ),
+    tabBarTheme: const TabBarTheme(
+      indicatorSize: TabBarIndicatorSize.tab,
+      labelColor: Constants.myPink,
+      unselectedLabelColor: Constants.myWrite,
+      labelStyle: TextStyle(fontSize: 18),
+      unselectedLabelStyle: TextStyle(fontSize: 18),
+      indicator: UnderlineTabIndicator(
+        borderSide: BorderSide(color: Constants.myPink, width: 2),
+      ),
+    ),
+    inputDecorationTheme: const InputDecorationTheme(
+      labelStyle: TextStyle(fontSize: 16, color: Constants.myBlack),
+      floatingLabelStyle: TextStyle(fontSize: 18, color: Constants.myBlack),
+      hintStyle: TextStyle(color: Constants.myGrey),
+      focusedBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Constants.myBlack),
+      ),
+    ),
+    scaffoldBackgroundColor: Constants.myWrite,
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: Constants.myWrite,
+    ),
+    primaryColor: Constants.myPurple,
+    primaryColorLight: Constants.myPurple,
+    iconTheme: const IconThemeData(color: Constants.myPurple),
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: Constants.myPurple,
+    ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
+        backgroundColor: MaterialStateProperty.all(Constants.myPurple),
+      ),
+    ),
+    colorScheme: const ColorScheme.light(primary: Constants.myPurple),
   );
 
   static ThemeData bookTheme = ThemeData(
@@ -52,9 +107,9 @@ class Themes {
         borderSide: BorderSide(color: Constants.myBlack),
       ),
     ),
-    scaffoldBackgroundColor: const Color.fromRGBO(249, 241, 230, 1),
+    scaffoldBackgroundColor: Constants.myBeige,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: Color.fromRGBO(249, 241, 230, 1),
+      backgroundColor: Constants.myBeige,
     ),
     primaryColor: Constants.myOrange,
     primaryColorLight: Constants.myOrange,

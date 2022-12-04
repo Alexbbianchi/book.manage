@@ -9,5 +9,8 @@ class Constants {
   static const Color myBrown = Color.fromRGBO(210, 179, 153, 1);
   static const Color myBlack = Color.fromRGBO(55, 66, 93, 1);
   static const Color myBeige = Color.fromRGBO(249, 241, 230, 1);
+  static const Color myPurple = Color.fromRGBO(145, 88, 116, 1);
+  static const Color myPink = Color.fromRGBO(227, 162, 184, 1);
+  static const Color myWrite = Color.fromRGBO(253, 253, 253, 1);
   static const TextStyle sdFormText = TextStyle(fontSize: 14);
 }

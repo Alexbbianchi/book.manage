@@ -23,7 +23,8 @@ class BookApi {
 
   Widget get thumbnail => thumbnailUrl != null
       ? Image.network(thumbnailUrl!)
-      : Image.asset(ConstantAssets.imgDefault, fit: BoxFit.fill, height: 160);
+      : Image.asset(ConstantAssets.imgDarkDefault,
+          fit: BoxFit.fill, height: 160);
   //  CircleAvatar(child: Text(title[0]));
 
   BookApi.fromJson(Map<String, dynamic> jsonMap)

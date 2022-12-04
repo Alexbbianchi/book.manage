@@ -25,7 +25,7 @@ class _AppState extends State<App> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Folha Amarela',
-      theme: Themes.bookTheme,
+      theme: Themes.lightTheme,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate

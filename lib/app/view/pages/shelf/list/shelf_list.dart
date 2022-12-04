@@ -14,7 +14,7 @@ class ShelfList extends StatelessWidget {
 
   final _back = ShelfListBack();
 
-  dynamic _imageBook(Shelf shelf) {
+  dynamic _imageBook(Shelf shelf, BuildContext context) {
     String? uri;
 
     if (shelf.books!.isNotEmpty) {
@@ -29,10 +29,10 @@ class ShelfList extends StatelessWidget {
     }
     // Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
     return CircleAvatar(
-      backgroundColor: Constants.myBrown,
+      backgroundColor: Theme.of(context).primaryColor,
       child: Text(
         shelf.name!.substring(0, 1).toUpperCase(),
-        style: const TextStyle(color: Constants.myBlack),
+        style: const TextStyle(color: Constants.myWrite),
       ),
     );
   }
@@ -95,7 +95,7 @@ class ShelfList extends StatelessWidget {
                                   right: 15,
                                   top: 10,
                                 ),
-                                leading: _imageBook(resultData[i]),
+                                leading: _imageBook(resultData[i], context),
                                 title: Row(
                                   children: [
                                     Text(

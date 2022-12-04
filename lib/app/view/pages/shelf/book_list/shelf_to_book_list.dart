@@ -113,7 +113,6 @@ class ShelfToBookList extends StatelessWidget {
                     },
                     confirmText: const Text(
                       'Aplicar',
-                      style: TextStyle(color: Constants.myOrange),
                     ),
                   );
                 },

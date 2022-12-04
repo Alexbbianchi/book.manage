@@ -13,14 +13,14 @@ class ButtonDeleteIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return SlidableAction(
       label: 'Excluir',
-      backgroundColor: Constants.myDarkBeige,
-      foregroundColor: Colors.black,
+      backgroundColor: Theme.of(context).primaryColor,
+      // foregroundColor: Colors.white,
       icon: Icons.delete,
       onPressed: (ctx) {
         showDialog(
           context: _context,
           builder: (_) => AlertDialog(
-            title: const Text('Excluir livro'),
+            title: const Text('Excluir item'),
             content: const Text('Deseja realmente excluir?'),
             actions: [
               Row(

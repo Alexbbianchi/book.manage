@@ -24,7 +24,7 @@ class Tile extends StatelessWidget {
       return ImageParse.imageFromBase64String(uri);
     }
     return Image.asset(
-      ConstantAssets.imgDefault,
+      ConstantAssets.imgDarkDefault,
       fit: BoxFit.fill,
       height: 160,
     );

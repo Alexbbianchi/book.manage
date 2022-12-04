@@ -144,7 +144,7 @@ class _DesireDetaisState extends State<DesireDetais> {
         onTap: _showDialog,
         child: widget.back.book!.image != null
             ? ImageParse.imageFromBase64String(widget.back.book!.image!)
-            : Image.asset(ConstantAssets.imgDefault),
+            : Image.asset(ConstantAssets.imgDarkDefault),
       ),
     );
   }
@@ -265,7 +265,6 @@ class _DesireDetaisState extends State<DesireDetais> {
                     widget.back.book!.format = value;
                   });
                 },
-                // dropdownColor: Constants.myBrown,
               ),
             ),
           ],
@@ -307,7 +306,6 @@ class _DesireDetaisState extends State<DesireDetais> {
           cancelText: const Text('Cancelar'),
           confirmText: const Text(
             'Aplicar',
-            style: TextStyle(color: Constants.myOrange),
           ),
           title: const Text('Gênero'),
           closeSearchIcon: const Icon(Icons.search_off),
@@ -410,7 +408,6 @@ class _DesireDetaisState extends State<DesireDetais> {
                     widget.back.book!.language = value;
                   });
                 },
-                // dropdownColor: Constants.myBrown,
               ),
             )
           ],

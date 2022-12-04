@@ -151,7 +151,7 @@ class _BookDetaisFormState extends State<BookDetaisForm> {
         onTap: _showDialog,
         child: widget.back.book!.image != null
             ? ImageParse.imageFromBase64String(widget.back.book!.image!)
-            : Image.asset(ConstantAssets.imgDefault,
+            : Image.asset(ConstantAssets.imgDarkDefault,
                 fit: BoxFit.fill, height: 160),
       ),
     );
@@ -314,7 +314,6 @@ class _BookDetaisFormState extends State<BookDetaisForm> {
           cancelText: const Text('Cancelar'),
           confirmText: const Text(
             'Aplicar',
-            style: TextStyle(color: Constants.myOrange),
           ),
           title: const Text('Gênero'),
           closeSearchIcon: const Icon(Icons.search_off),

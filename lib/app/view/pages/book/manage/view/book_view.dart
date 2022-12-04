@@ -70,7 +70,7 @@ class _BookViewState extends State<BookView>
                       ),
                       child: back.book!.image != null
                           ? ImageParse.imageFromBase64String(back.book!.image!)
-                          : Image.asset(ConstantAssets.imgDefault),
+                          : Image.asset(ConstantAssets.imgDarkDefault),
                     ),
                   ),
                   Expanded(

@@ -45,7 +45,7 @@ class BorrowedView extends StatelessWidget {
                         child: _back.borrowed!.book!.image != null
                             ? ImageParse.imageFromBase64String(
                                 _back.borrowed!.book!.image!)
-                            : Image.asset(ConstantAssets.imgDefault),
+                            : Image.asset(ConstantAssets.imgDarkDefault),
                       ),
                     ),
                     Expanded(

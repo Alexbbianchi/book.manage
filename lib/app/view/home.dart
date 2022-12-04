@@ -87,7 +87,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                   activeIcon: Icon(
                     Icons.book,
-                    color: Constants.myOrange,
                     size: 30,
                   ),
                   tooltip: 'Livro',
@@ -109,7 +108,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                   activeIcon: Icon(
                     Icons.favorite,
-                    color: Constants.myOrange,
                     size: 30,
                   ),
                   tooltip: 'Desejo',

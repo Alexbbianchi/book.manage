@@ -12,8 +12,8 @@ class ButtonEditIcon extends StatelessWidget {
     return SlidableAction(
       label: 'Editar',
       icon: Icons.edit,
-      backgroundColor: Constants.myDarkBeige,
-      foregroundColor: Constants.myOrange,
+      backgroundColor: Theme.of(context).primaryColor,
+      // foregroundColor: Constants.myBlack,
       onPressed: (ctx) => _onPressed(),
     );
   }

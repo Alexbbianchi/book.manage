@@ -9,7 +9,7 @@ void main() {
 // flutter build apk
 
 // comand: flutter pub run build_runner build --delete-conflicting-outputs
-
+// flutter doctor
 /* 
 flutter pub get
 flutter pub run flutter_launcher_icons:main
